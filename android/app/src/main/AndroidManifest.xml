@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Hablar con la API de Tally (solo lectura). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Solo para los avisos de respuestas nuevas (Android 13+); se pide recién cuando se activan. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".TallyApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="Tally Monitor"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TallyMonitor"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Widgets: los actualiza el sistema (APPWIDGET_UPDATE) y la app, por eso no hace falta exportarlos. -->
+        <receiver
+            android:name=".widget.TallyWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_summary">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyDotWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_dot">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_dot" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyGoalWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_goal">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_goal" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyRankingWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_race">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_race" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyNewsWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_news">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_news" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyShortcutWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_shortcut">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_shortcut" />
+        </receiver>
+        <receiver
+            android:name=".widget.TallyListWidgetProvider"
+            android:exported="false"
+            android:label="@string/widget_label_list">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_list" />
+        </receiver>
+        <!-- Elegir la encuesta del widget «Acceso directo»: lo abre el lanzador de widgets del sistema. -->
+        <activity
+            android:name=".widget.WidgetShortcutConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TallyWidgetConfig">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.WidgetGoalConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TallyWidgetConfig">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <!-- Datos de la lista deslizable del widget «Lista de encuestas». -->
+        <service
+            android:name=".widget.WidgetListService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+</manifest>

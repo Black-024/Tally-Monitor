@@ -1,0 +1,44 @@
+# Secretos y firma: NUNCA al repositorio
+*.jks
+*.keystore
+keystore.properties
+local.properties
+.env
+*.key
+*.pem
+credentials*
+*.dat
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+
+# Resultados de compilar y empaquetar
+build/
+dist/
+release/
+.gradle/
+.cxx/
+.externalNativeBuild
+captures/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Registros, informes y notas de trabajo
+*.log
+informes-prueba/
+informe-*.json
+errores_*.txt
+Mapa.txt
+
+# Editor / sistema
+.idea/
+.vscode/
+.kotlin/
+*.iml
+.DS_Store
+Thumbs.db

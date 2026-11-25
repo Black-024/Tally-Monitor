@@ -1,0 +1,91 @@
+{
+ "id": "F1",
+ "name": "Encuesta demo",
+ "status": "PUBLISHED",
+ "isClosed": false,
+ "numberOfSubmissions": 3,
+ "createdAt": "2026-01-01T00:00:00.000Z",
+ "updatedAt": "2026-01-02T00:00:00.000Z",
+ "workspaceId": "W1",
+ "createdByUserId": "u",
+ "settings": {
+  "x": 1
+ },
+ "blocks": [
+  {
+   "type": "TITLE",
+   "groupType": "TITLE",
+   "uuid": "b0",
+   "groupUuid": "g0",
+   "payload": {
+    "title": "zz",
+    "safeHTMLSchema": [
+     [
+      "x"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "MULTIPLE_CHOICE_OPTION",
+   "groupType": "MULTIPLE_CHOICE",
+   "uuid": "b1",
+   "groupUuid": "g1",
+   "payload": {
+    "index": 1,
+    "text": "Rojo",
+    "isFirst": false,
+    "isLast": false
+   }
+  },
+  {
+   "type": "MULTIPLE_CHOICE_OPTION",
+   "groupType": "MULTIPLE_CHOICE",
+   "uuid": "b2",
+   "groupUuid": "g1",
+   "payload": {
+    "index": 0,
+    "text": "Azul",
+    "isFirst": true,
+    "hasOtherOption": true
+   }
+  },
+  {
+   "type": "CHECKBOX",
+   "groupType": "CHECKBOXES",
+   "uuid": "b3",
+   "groupUuid": "g2",
+   "payload": {
+    "index": 0,
+    "text": "A"
+   }
+  },
+  {
+   "type": "CHECKBOX",
+   "groupType": "CHECKBOXES",
+   "uuid": "b4",
+   "groupUuid": "g2",
+   "payload": {
+    "index": 1,
+    "text": "B"
+   }
+  },
+  {
+   "type": "TEXTAREA",
+   "groupType": "TEXTAREA",
+   "uuid": "b5",
+   "groupUuid": "g3",
+   "payload": {
+    "isRequired": false,
+    "placeholder": "p"
+   }
+  },
+  {
+   "type": "INPUT_TEXT",
+   "groupType": "INPUT_TEXT",
+   "uuid": "b6",
+   "groupUuid": "g4",
+   "payload": {}
+  }
+ ]
+}

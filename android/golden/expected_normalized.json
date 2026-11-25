@@ -1,0 +1,205 @@
+{
+ "form_row": {
+  "form_id": "F1",
+  "name": "Encuesta demo",
+  "status": "PUBLISHED",
+  "is_closed": false,
+  "workspace_id": "W1",
+  "reported_submissions": 3,
+  "created_at": "2026-01-01T00:00:00.000Z",
+  "updated_at": "2026-01-02T00:00:00.000Z"
+ },
+ "question_rows": [
+  {
+   "question_id": "q1",
+   "position": 0,
+   "type": "MULTIPLE_CHOICE",
+   "title": "Color",
+   "reported_responses": 3,
+   "group_uuid": "g1",
+   "has_other_option": true,
+   "is_deleted": false,
+   "options": [
+    "Azul",
+    "Rojo"
+   ]
+  },
+  {
+   "question_id": "q2",
+   "position": 1,
+   "type": "CHECKBOXES",
+   "title": "Letras",
+   "reported_responses": 3,
+   "group_uuid": "g2",
+   "has_other_option": false,
+   "is_deleted": false,
+   "options": [
+    "A",
+    "B"
+   ]
+  },
+  {
+   "question_id": "q3",
+   "position": 2,
+   "type": "TEXTAREA",
+   "title": "Comentario",
+   "reported_responses": 3,
+   "group_uuid": "g3",
+   "has_other_option": false,
+   "is_deleted": false,
+   "options": []
+  },
+  {
+   "question_id": "q4",
+   "position": 3,
+   "type": "INPUT_TEXT",
+   "title": "Nombre",
+   "reported_responses": 1,
+   "group_uuid": "g4",
+   "has_other_option": false,
+   "is_deleted": false,
+   "options": []
+  }
+ ],
+ "submission_rows": [
+  {
+   "submission_id": "s1",
+   "form_id": "F1",
+   "submitted_at": "2026-02-01T10:00:00.000Z",
+   "is_completed": true,
+   "created_at": "2026-02-01T10:00:00.000Z",
+   "updated_at": "2026-02-01T10:00:00.000Z",
+   "answers": [
+    {
+     "question_id": "q1",
+     "kind": "single",
+     "text_value": "Rojo",
+     "is_blank": false,
+     "raw_json": "[\"Rojo\"]",
+     "choices": [
+      {
+       "option_text": "Rojo",
+       "origin": "declared"
+      }
+     ]
+    },
+    {
+     "question_id": "q2",
+     "kind": "multi",
+     "text_value": "A, B",
+     "is_blank": false,
+     "raw_json": "[\"A\", \"B\"]",
+     "choices": [
+      {
+       "option_text": "A",
+       "origin": "declared"
+      },
+      {
+       "option_text": "B",
+       "origin": "declared"
+      }
+     ]
+    },
+    {
+     "question_id": "q3",
+     "kind": "text",
+     "text_value": "Hola mail@x.com",
+     "is_blank": false,
+     "raw_json": "\"Hola mail@x.com\"",
+     "choices": []
+    },
+    {
+     "question_id": "q4",
+     "kind": "raw",
+     "text_value": "Ana",
+     "is_blank": false,
+     "raw_json": "\"Ana\"",
+     "choices": []
+    }
+   ]
+  },
+  {
+   "submission_id": "s2",
+   "form_id": "F1",
+   "submitted_at": "2026-02-02T10:00:00.000Z",
+   "is_completed": true,
+   "created_at": "2026-02-02T10:00:00.000Z",
+   "updated_at": "2026-02-02T10:00:00.000Z",
+   "answers": [
+    {
+     "question_id": "q1",
+     "kind": "single",
+     "text_value": "Verde",
+     "is_blank": false,
+     "raw_json": "[\"Verde\"]",
+     "choices": [
+      {
+       "option_text": "Verde",
+       "origin": "other"
+      }
+     ]
+    },
+    {
+     "question_id": "q2",
+     "kind": "multi",
+     "text_value": null,
+     "is_blank": true,
+     "raw_json": "[]",
+     "choices": []
+    },
+    {
+     "question_id": "q3",
+     "kind": "text",
+     "text_value": "   ",
+     "is_blank": true,
+     "raw_json": "\"   \"",
+     "choices": []
+    }
+   ]
+  },
+  {
+   "submission_id": "s3",
+   "form_id": "F1",
+   "submitted_at": "2026-02-03T10:00:00.000Z",
+   "is_completed": false,
+   "created_at": "2026-02-03T10:00:00.000Z",
+   "updated_at": "2026-02-03T10:00:00.000Z",
+   "answers": [
+    {
+     "question_id": "q1",
+     "kind": "single",
+     "text_value": "Azul",
+     "is_blank": false,
+     "raw_json": "[\"Azul\"]",
+     "choices": [
+      {
+       "option_text": "Azul",
+       "origin": "declared"
+      }
+     ]
+    },
+    {
+     "question_id": "q2",
+     "kind": "multi",
+     "text_value": "B",
+     "is_blank": false,
+     "raw_json": "[\"B\"]",
+     "choices": [
+      {
+       "option_text": "B",
+       "origin": "declared"
+      }
+     ]
+    },
+    {
+     "question_id": "q3",
+     "kind": "text",
+     "text_value": null,
+     "is_blank": true,
+     "raw_json": "null",
+     "choices": []
+    }
+   ]
+  }
+ ]
+}

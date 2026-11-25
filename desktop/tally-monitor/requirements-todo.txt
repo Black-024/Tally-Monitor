@@ -1,0 +1,25 @@
+# Tally Monitor — TODAS las bibliotecas que hacen falta, en un solo archivo.
+#
+# Requisito previo: Python 3.13 para Windows instalado (se usa con el comando `py`).
+#
+# Instalar todo (PowerShell, desde la carpeta del proyecto):
+#     py -m pip install -r requirements-todo.txt
+#
+# Si solo querés usar la app:            py -m pip install -r requirements.txt
+# Si además querés correr las pruebas:   py -m pip install -r requirements.txt -r requirements-dev.txt
+# Si además querés generar el .exe:      py -m pip install -r requirements.txt -r requirements-build.txt
+
+# --- Para usar la app (obligatorio) ---
+PySide6>=6.8,<7
+# Exportaciones
+openpyxl>=3.1
+reportlab>=4.0
+
+# --- Para correr las pruebas (py -m pytest -q) ---
+pytest>=8
+pytest-qt>=4.4
+
+# --- Para generar el .exe (scripts\crear_release.bat) ---
+pyinstaller>=6.10
+
+# Nota: el resto (sqlite3, urllib, ctypes, json…) viene incluido con Python; no se instala nada más.

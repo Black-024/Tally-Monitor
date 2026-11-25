@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The widget picker uses the system language (not the in-app language setting). -->
+    <string name="widget_description">How many surveys and responses you have saved, and whether there are responses not yet updated.</string>
+    <string name="widget_description_dot">A circle: red with the number if there are responses not yet updated, green with ✓ if everything is up to date.</string>
+    <string name="widget_description_goal">The response goal of the survey you choose, with a progress bar.</string>
+    <string name="widget_description_race">The 3 surveys with the most responses, with bars to compare them.</string>
+    <string name="widget_description_news">«3 new responses» or «No new responses», at a glance.</string>
+    <string name="widget_description_shortcut">A shortcut to the survey you choose, with its number of responses.</string>
+    <string name="widget_description_list">All your surveys in a scrollable list: tap one and it opens.</string>
+    <string name="widget_label_summary">Tally · Summary</string>
+    <string name="widget_label_dot">Tally · Traffic light</string>
+    <string name="widget_label_goal">Tally · Goal</string>
+    <string name="widget_label_race">Tally · Ranking</string>
+    <string name="widget_label_news">Tally · News</string>
+    <string name="widget_label_shortcut">Tally · Shortcut</string>
+    <string name="widget_label_list">Tally · Survey list</string>
+</resources>

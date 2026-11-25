@@ -1,0 +1,2 @@
+# Solo para generar el .exe (no hace falta para usar la app con Python).
+pyinstaller>=6.10

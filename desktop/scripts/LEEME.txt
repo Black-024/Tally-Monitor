@@ -1,0 +1,12 @@
+SCRIPTS DE TALLY MONITOR (hacer doble clic en el .bat)
+
+  modo_prueba.bat           Abre el programa en MODO PRUEBA; al cerrarlo deja un informe .json (sin datos sensibles).
+  crear_release.bat         Corre pruebas y auditoria y genera en la carpeta release: el .exe, el zip portable,
+                            el instalador (si esta Inno Setup 6) y los SHA-256.
+  verificar.bat             Pruebas + prueba de carga + auditoria de seguridad (sin generar nada).
+  fijar_dependencias.bat    Fija versiones y hashes de las dependencias (necesita Internet). Hacerlo antes de publicar.
+  subir_a_github.bat        Sube la carpeta tally-monitor a un repositorio de GitHub con tu Git.
+  verificar_conexion_real.bat   Comprueba la sincronizacion contra tu cuenta real de Tally (te pide la API Key oculta).
+
+Las tres carpetas (tally-monitor, scripts, release) deben estar juntas.
+Los archivos .py de esta carpeta (prueba_de_carga, verify_*) los usan los .bat; no hace falta abrirlos.

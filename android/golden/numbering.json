@@ -1,0 +1,134 @@
+{
+ "format": [
+  {
+   "n": 1,
+   "label": "Usuario 001"
+  },
+  {
+   "n": 2,
+   "label": "Usuario 002"
+  },
+  {
+   "n": 9,
+   "label": "Usuario 009"
+  },
+  {
+   "n": 12,
+   "label": "Usuario 012"
+  },
+  {
+   "n": 999,
+   "label": "Usuario 999"
+  },
+  {
+   "n": 9999,
+   "label": "Usuario 9999"
+  },
+  {
+   "n": 10000,
+   "label": "Usuario A001"
+  },
+  {
+   "n": 10001,
+   "label": "Usuario A002"
+  },
+  {
+   "n": 19998,
+   "label": "Usuario A9999"
+  },
+  {
+   "n": 19999,
+   "label": "Usuario B001"
+  },
+  {
+   "n": 29997,
+   "label": "Usuario B9999"
+  },
+  {
+   "n": 29998,
+   "label": "Usuario C001"
+  },
+  {
+   "n": 269999,
+   "label": "Usuario AA026"
+  },
+  {
+   "n": 300000,
+   "label": "Usuario AD030"
+  },
+  {
+   "n": 269974,
+   "label": "Usuario AA001"
+  },
+  {
+   "n": 279972,
+   "label": "Usuario AA9999"
+  }
+ ],
+ "parse": [
+  {
+   "text": "Usuario 012",
+   "n": 12
+  },
+  {
+   "text": "12",
+   "n": 12
+  },
+  {
+   "text": "001",
+   "n": 1
+  },
+  {
+   "text": "9999",
+   "n": 9999
+  },
+  {
+   "text": "10000",
+   "n": null
+  },
+  {
+   "text": "A001",
+   "n": 10000
+  },
+  {
+   "text": "usuario a001",
+   "n": 10000
+  },
+  {
+   "text": "A9999",
+   "n": 19998
+  },
+  {
+   "text": "B001",
+   "n": 19999
+  },
+  {
+   "text": "AA001",
+   "n": 269974
+  },
+  {
+   "text": "Z001",
+   "n": 259975
+  },
+  {
+   "text": "0",
+   "n": null
+  },
+  {
+   "text": "Usuario 0",
+   "n": null
+  },
+  {
+   "text": "hola",
+   "n": null
+  },
+  {
+   "text": "A000",
+   "n": null
+  },
+  {
+   "text": "A10000",
+   "n": null
+  }
+ ]
+}

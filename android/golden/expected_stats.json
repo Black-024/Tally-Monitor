@@ -1,0 +1,327 @@
+{
+ "tz_offset_hours": -3,
+ "overview": {
+  "total": 3,
+  "completed": 2,
+  "partial": 1,
+  "first_at": "2026-02-01T10:00:00.000Z",
+  "last_at": "2026-02-03T10:00:00.000Z",
+  "span_days": 3,
+  "per_day": 1.0
+ },
+ "questions": [
+  {
+   "question_id": "q1",
+   "position": 0,
+   "type": "MULTIPLE_CHOICE",
+   "title": "Color",
+   "kind": "single",
+   "interpreted": true,
+   "asked": 3,
+   "answered": 3,
+   "blank": 0,
+   "not_asked": 0,
+   "base_note": "% sobre quienes respondieron esta pregunta",
+   "options": [
+    {
+     "text": "Azul",
+     "count": 1,
+     "pct": 33.333333333333336
+    },
+    {
+     "text": "Rojo",
+     "count": 1,
+     "pct": 33.333333333333336
+    }
+   ],
+   "other_count": 1,
+   "other_values": [
+    [
+     "Verde",
+     1
+    ]
+   ],
+   "orphan_count": 0,
+   "orphan_values": [],
+   "avg_len": null,
+   "max_len": null,
+   "is_deleted": false
+  },
+  {
+   "question_id": "q2",
+   "position": 1,
+   "type": "CHECKBOXES",
+   "title": "Letras",
+   "kind": "multi",
+   "interpreted": true,
+   "asked": 3,
+   "answered": 2,
+   "blank": 1,
+   "not_asked": 0,
+   "base_note": "% de personas que respondieron esta pregunta (puede sumar más de 100 %)",
+   "options": [
+    {
+     "text": "A",
+     "count": 1,
+     "pct": 50.0
+    },
+    {
+     "text": "B",
+     "count": 2,
+     "pct": 100.0
+    }
+   ],
+   "other_count": 0,
+   "other_values": [],
+   "orphan_count": 0,
+   "orphan_values": [],
+   "avg_len": null,
+   "max_len": null,
+   "is_deleted": false
+  },
+  {
+   "question_id": "q3",
+   "position": 2,
+   "type": "TEXTAREA",
+   "title": "Comentario",
+   "kind": "text",
+   "interpreted": true,
+   "asked": 3,
+   "answered": 1,
+   "blank": 2,
+   "not_asked": 0,
+   "base_note": "",
+   "options": [],
+   "other_count": 0,
+   "other_values": [],
+   "orphan_count": 0,
+   "orphan_values": [],
+   "avg_len": 15.0,
+   "max_len": 15,
+   "is_deleted": false
+  },
+  {
+   "question_id": "q4",
+   "position": 3,
+   "type": "INPUT_TEXT",
+   "title": "Nombre",
+   "kind": "raw",
+   "interpreted": false,
+   "asked": 1,
+   "answered": 1,
+   "blank": 0,
+   "not_asked": 2,
+   "base_note": "",
+   "options": [],
+   "other_count": 0,
+   "other_values": [],
+   "orphan_count": 0,
+   "orphan_values": [],
+   "avg_len": null,
+   "max_len": null,
+   "is_deleted": false
+  }
+ ],
+ "timeline": {
+  "bucket": "hour",
+  "points": [
+   {
+    "start": "2026-02-01 07:00:00",
+    "count": 1
+   },
+   {
+    "start": "2026-02-01 08:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 09:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 10:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 11:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 12:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 13:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 14:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 15:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 16:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 17:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 18:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 19:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 20:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 21:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 22:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-01 23:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 00:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 01:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 02:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 03:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 04:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 05:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 06:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 07:00:00",
+    "count": 1
+   },
+   {
+    "start": "2026-02-02 08:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 09:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 10:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 11:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 12:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 13:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 14:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 15:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 16:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 17:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 18:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 19:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 20:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 21:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 22:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-02 23:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 00:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 01:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 02:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 03:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 04:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 05:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 06:00:00",
+    "count": 0
+   },
+   {
+    "start": "2026-02-03 07:00:00",
+    "count": 1
+   }
+  ],
+  "total": 3
+ }
+}

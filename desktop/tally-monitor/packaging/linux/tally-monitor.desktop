@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Tally Monitor
+Comment=Ver, analizar y exportar tus encuestas de Tally (solo lectura)
+Exec=TallyMonitor
+Icon=tally-monitor
+Categories=Office;Utility;
+Terminal=false
+StartupWMClass=TallyMonitor

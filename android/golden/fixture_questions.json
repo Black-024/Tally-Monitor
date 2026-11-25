@@ -1,0 +1,67 @@
+{
+ "hasResponses": true,
+ "questions": [
+  {
+   "id": "q1",
+   "type": "MULTIPLE_CHOICE",
+   "title": "Color",
+   "numberOfResponses": 3,
+   "isDeleted": false,
+   "formId": "F1",
+   "fields": [
+    {
+     "blockGroupUuid": "g1",
+     "questionType": "MULTIPLE_CHOICE",
+     "type": "MULTIPLE_CHOICE",
+     "uuid": "u1",
+     "title": "t"
+    }
+   ]
+  },
+  {
+   "id": "q2",
+   "type": "CHECKBOXES",
+   "title": "Letras",
+   "numberOfResponses": 3,
+   "isDeleted": false,
+   "fields": [
+    {
+     "blockGroupUuid": "g2",
+     "questionType": "CHECKBOXES",
+     "type": "CHECKBOXES",
+     "uuid": "u2"
+    }
+   ]
+  },
+  {
+   "id": "q3",
+   "type": "TEXTAREA",
+   "title": "Comentario",
+   "numberOfResponses": 3,
+   "isDeleted": false,
+   "fields": [
+    {
+     "blockGroupUuid": "g3",
+     "questionType": "TEXTAREA",
+     "type": "TEXTAREA",
+     "uuid": "u3"
+    }
+   ]
+  },
+  {
+   "id": "q4",
+   "type": "INPUT_TEXT",
+   "title": "Nombre",
+   "numberOfResponses": 1,
+   "isDeleted": false,
+   "fields": [
+    {
+     "blockGroupUuid": "g4",
+     "questionType": "INPUT_TEXT",
+     "type": "INPUT_TEXT",
+     "uuid": "u4"
+    }
+   ]
+  }
+ ]
+}

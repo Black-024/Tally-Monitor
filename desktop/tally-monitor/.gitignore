@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Resultados de compilar y empaquetar
+build/
+dist/
+release/
+*.spec.bak
+
+# Datos y secretos: NUNCA al repositorio
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.dat
+credentials*
+*.log
+informes-prueba/
+informe-*.json
+.env
+*.key
+*.pem
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

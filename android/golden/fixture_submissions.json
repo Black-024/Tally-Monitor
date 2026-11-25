@@ -1,0 +1,90 @@
+[
+ {
+  "id": "s1",
+  "formId": "F1",
+  "respondentId": "R1",
+  "isCompleted": true,
+  "submittedAt": "2026-02-01T10:00:00.000Z",
+  "createdAt": "2026-02-01T10:00:00.000Z",
+  "updatedAt": "2026-02-01T10:00:00.000Z",
+  "previewUrl": "http://x",
+  "pdfUrl": "http://y",
+  "locale": "es",
+  "extra": 1,
+  "responses": [
+   {
+    "id": "r",
+    "questionId": "q1",
+    "sessionUuid": "s",
+    "answer": [
+     "Rojo"
+    ]
+   },
+   {
+    "questionId": "q2",
+    "answer": [
+     "A",
+     "B"
+    ]
+   },
+   {
+    "questionId": "q3",
+    "answer": "Hola mail@x.com"
+   },
+   {
+    "questionId": "q4",
+    "answer": "Ana"
+   }
+  ]
+ },
+ {
+  "id": "s2",
+  "formId": "F1",
+  "isCompleted": true,
+  "submittedAt": "2026-02-02T10:00:00.000Z",
+  "createdAt": "2026-02-02T10:00:00.000Z",
+  "updatedAt": "2026-02-02T10:00:00.000Z",
+  "responses": [
+   {
+    "questionId": "q1",
+    "answer": [
+     "Verde"
+    ]
+   },
+   {
+    "questionId": "q2",
+    "answer": []
+   },
+   {
+    "questionId": "q3",
+    "answer": "   "
+   }
+  ]
+ },
+ {
+  "id": "s3",
+  "formId": "F1",
+  "isCompleted": false,
+  "submittedAt": "2026-02-03T10:00:00.000Z",
+  "createdAt": "2026-02-03T10:00:00.000Z",
+  "updatedAt": "2026-02-03T10:00:00.000Z",
+  "responses": [
+   {
+    "questionId": "q1",
+    "answer": [
+     "Azul"
+    ]
+   },
+   {
+    "questionId": "q2",
+    "answer": [
+     "B"
+    ]
+   },
+   {
+    "questionId": "q3",
+    "answer": null
+   }
+  ]
+ }
+]

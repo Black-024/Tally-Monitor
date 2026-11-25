@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Cuántas encuestas y respuestas tenés guardadas, y si hay respuestas sin actualizar.</string>
+    <string name="widget_description_dot">Un círculo: rojo con el número si hay respuestas sin actualizar, verde con ✓ si está todo al día.</string>
+    <string name="widget_description_goal">La meta de respuestas de la encuesta que elijas, con barra de progreso.</string>
+    <string name="widget_description_race">Las 3 encuestas con más respuestas, con barras para compararlas.</string>
+    <string name="widget_description_news">«3 respuestas nuevas» o «Sin nuevas respuestas», de un vistazo.</string>
+    <string name="widget_description_shortcut">Un acceso directo a la encuesta que elijas, con su cantidad de respuestas.</string>
+    <string name="widget_description_list">Todas tus encuestas en una lista deslizable: tocá una y se abre.</string>
+    <string name="widget_label_summary">Tally · Resumen</string>
+    <string name="widget_label_dot">Tally · Semáforo</string>
+    <string name="widget_label_goal">Tally · Meta</string>
+    <string name="widget_label_race">Tally · Ranking</string>
+    <string name="widget_label_news">Tally · Novedades</string>
+    <string name="widget_label_shortcut">Tally · Acceso directo</string>
+    <string name="widget_label_list">Tally · Lista de encuestas</string>
+</resources>

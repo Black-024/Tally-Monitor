@@ -1,0 +1,46 @@
+[
+ {
+  "in": "Mi mail es ana.perez+x@mail.com ok",
+  "out": "Mi mail es [oculto] ok"
+ },
+ {
+  "in": "visitá https://x.com/a?b=1 o www.sitio.org",
+  "out": "visitá [oculto] o [oculto]"
+ },
+ {
+  "in": "seguime @pepe_23 y @ab",
+  "out": "seguime [oculto] y @ab"
+ },
+ {
+  "in": "llamame al +54 9 11 5555-1234",
+  "out": "llamame al [oculto]"
+ },
+ {
+  "in": "DNI 30123456",
+  "out": "DNI [oculto]"
+ },
+ {
+  "in": "tengo 3 gatos y 25 años",
+  "out": "tengo 3 gatos y 25 años"
+ },
+ {
+  "in": "fecha 12/10/2026",
+  "out": "fecha 12/10/2026"
+ },
+ {
+  "in": "tarjeta 4111 1111 1111 1111",
+  "out": "tarjeta [oculto]"
+ },
+ {
+  "in": "cod 123456",
+  "out": "cod 123456"
+ },
+ {
+  "in": "",
+  "out": ""
+ },
+ {
+  "in": "abc@d.co, otro@e.org",
+  "out": "[oculto], [oculto]"
+ }
+]

@@ -1,0 +1,238 @@
+{
+ "form": {
+  "id": "F1",
+  "numberOfSubmissions": 3,
+  "updatedAt": "2026-01-02T00:00:00.000Z",
+  "status": "PUBLISHED",
+  "isClosed": false,
+  "name": "Encuesta demo",
+  "createdAt": "2026-01-01T00:00:00.000Z",
+  "workspaceId": "W1",
+  "blocks": [
+   {
+    "groupType": "TITLE",
+    "uuid": "b0",
+    "type": "TITLE",
+    "groupUuid": "g0",
+    "payload": {}
+   },
+   {
+    "groupType": "MULTIPLE_CHOICE",
+    "uuid": "b1",
+    "type": "MULTIPLE_CHOICE_OPTION",
+    "groupUuid": "g1",
+    "payload": {
+     "index": 1,
+     "text": "Rojo",
+     "isFirst": false,
+     "isLast": false
+    }
+   },
+   {
+    "groupType": "MULTIPLE_CHOICE",
+    "uuid": "b2",
+    "type": "MULTIPLE_CHOICE_OPTION",
+    "groupUuid": "g1",
+    "payload": {
+     "hasOtherOption": true,
+     "index": 0,
+     "text": "Azul",
+     "isFirst": true
+    }
+   },
+   {
+    "groupType": "CHECKBOXES",
+    "uuid": "b3",
+    "type": "CHECKBOX",
+    "groupUuid": "g2",
+    "payload": {
+     "index": 0,
+     "text": "A"
+    }
+   },
+   {
+    "groupType": "CHECKBOXES",
+    "uuid": "b4",
+    "type": "CHECKBOX",
+    "groupUuid": "g2",
+    "payload": {
+     "index": 1,
+     "text": "B"
+    }
+   },
+   {
+    "groupType": "TEXTAREA",
+    "uuid": "b5",
+    "type": "TEXTAREA",
+    "groupUuid": "g3",
+    "payload": {
+     "isRequired": false
+    }
+   },
+   {
+    "groupType": "INPUT_TEXT",
+    "uuid": "b6",
+    "type": "INPUT_TEXT",
+    "groupUuid": "g4",
+    "payload": {}
+   }
+  ]
+ },
+ "form_unknown": [],
+ "questions": {
+  "questions": [
+   {
+    "id": "q1",
+    "type": "MULTIPLE_CHOICE",
+    "numberOfResponses": 3,
+    "isDeleted": false,
+    "title": "Color",
+    "fields": [
+     {
+      "blockGroupUuid": "g1",
+      "uuid": "u1",
+      "type": "MULTIPLE_CHOICE",
+      "questionType": "MULTIPLE_CHOICE"
+     }
+    ]
+   },
+   {
+    "id": "q2",
+    "type": "CHECKBOXES",
+    "numberOfResponses": 3,
+    "isDeleted": false,
+    "title": "Letras",
+    "fields": [
+     {
+      "blockGroupUuid": "g2",
+      "uuid": "u2",
+      "type": "CHECKBOXES",
+      "questionType": "CHECKBOXES"
+     }
+    ]
+   },
+   {
+    "id": "q3",
+    "type": "TEXTAREA",
+    "numberOfResponses": 3,
+    "isDeleted": false,
+    "title": "Comentario",
+    "fields": [
+     {
+      "blockGroupUuid": "g3",
+      "uuid": "u3",
+      "type": "TEXTAREA",
+      "questionType": "TEXTAREA"
+     }
+    ]
+   },
+   {
+    "id": "q4",
+    "type": "INPUT_TEXT",
+    "numberOfResponses": 1,
+    "isDeleted": false,
+    "title": "Nombre",
+    "fields": [
+     {
+      "blockGroupUuid": "g4",
+      "uuid": "u4",
+      "type": "INPUT_TEXT",
+      "questionType": "INPUT_TEXT"
+     }
+    ]
+   }
+  ],
+  "hasResponses": true
+ },
+ "questions_unknown": [],
+ "submissions": [
+  {
+   "id": "s1",
+   "submittedAt": "2026-02-01T10:00:00.000Z",
+   "isCompleted": true,
+   "updatedAt": "2026-02-01T10:00:00.000Z",
+   "formId": "F1",
+   "createdAt": "2026-02-01T10:00:00.000Z",
+   "responses": [
+    {
+     "questionId": "q1",
+     "answer": [
+      "Rojo"
+     ]
+    },
+    {
+     "questionId": "q2",
+     "answer": [
+      "A",
+      "B"
+     ]
+    },
+    {
+     "questionId": "q3",
+     "answer": "Hola mail@x.com"
+    },
+    {
+     "questionId": "q4",
+     "answer": "Ana"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "submittedAt": "2026-02-02T10:00:00.000Z",
+   "isCompleted": true,
+   "updatedAt": "2026-02-02T10:00:00.000Z",
+   "formId": "F1",
+   "createdAt": "2026-02-02T10:00:00.000Z",
+   "responses": [
+    {
+     "questionId": "q1",
+     "answer": [
+      "Verde"
+     ]
+    },
+    {
+     "questionId": "q2",
+     "answer": []
+    },
+    {
+     "questionId": "q3",
+     "answer": "   "
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "submittedAt": "2026-02-03T10:00:00.000Z",
+   "isCompleted": false,
+   "updatedAt": "2026-02-03T10:00:00.000Z",
+   "formId": "F1",
+   "createdAt": "2026-02-03T10:00:00.000Z",
+   "responses": [
+    {
+     "questionId": "q1",
+     "answer": [
+      "Azul"
+     ]
+    },
+    {
+     "questionId": "q2",
+     "answer": [
+      "B"
+     ]
+    },
+    {
+     "questionId": "q3",
+     "answer": null
+    }
+   ]
+  }
+ ],
+ "submissions_unknown": [
+  [
+   "submission.extra"
+  ],
+  [],
+  []
+ ]
+}

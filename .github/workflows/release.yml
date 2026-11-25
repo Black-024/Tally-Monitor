@@ -1,0 +1,144 @@
+# Publicación de versiones de Tally Monitor (escritorio).  *** NO PROBADO: escrito sin poder ejecutarlo en GitHub. ***
+#
+# Estructura del repositorio: desktop/ (tally-monitor + scripts) y android/. Este flujo solo construye `desktop/`.
+# La versión 1.0 publica Windows; Linux y macOS están desactivados (`if: false`) hasta la 1.1.0.
+# El APK de Android NO se construye acá: se firma en tu PC (scripts/firmar_android) y se sube a mano a la Release,
+# porque la llave de firma nunca debe estar en GitHub.
+#
+# Se dispara al empujar una etiqueta «v*» (por ejemplo v1.0.0) y crea un BORRADOR de Release con los archivos;
+# revisalo, sumale el APK y publicalo a mano. Con «Run workflow» (a mano) solo construye, sin publicar.
+name: Publicar versión
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:          # para probar la construcción a mano (no publica: el paso final exige una etiqueta)
+
+permissions:
+  contents: read
+
+env:
+  QT_QPA_PLATFORM: offscreen  # las pruebas de interfaz corren sin ventana real
+
+defaults:
+  run:
+    working-directory: desktop
+
+jobs:
+  windows:
+    name: Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Empaquetar (scripts/crear_release.ps1)
+        shell: pwsh
+        run: ./scripts/crear_release.ps1
+      - name: Nombrar las sumas de verificación
+        shell: pwsh
+        run: |
+          Move-Item release/SHA256SUMS.txt release/SHA256SUMS-windows.txt
+          Remove-Item release/NOTAS.md -ErrorAction SilentlyContinue
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tally-monitor-windows
+          path: |
+            desktop/release/*.zip
+            desktop/release/*.exe
+            desktop/release/SHA256SUMS-windows.txt
+          if-no-files-found: error
+
+  linux:
+    if: ${{ false }}          # se activa en la 1.1.0
+    name: Linux x86_64
+    runs-on: ubuntu-22.04      # glibc antigua: el paquete funciona también en distribuciones más viejas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bibliotecas de Qt y FUSE
+        run: sudo apt-get update && sudo apt-get install -y python3-venv libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-xinerama0 libdbus-1-3 libfontconfig1 libfuse2
+      - name: appimagetool (el script lo busca en la raíz del repo)
+        run: |
+          curl -fsSL -o appimagetool https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x appimagetool
+      - name: Empaquetar (scripts/linux/crear_release.sh)
+        run: bash scripts/linux/crear_release.sh
+      - name: Nombrar las sumas de verificación
+        run: mv release/SHA256SUMS release/SHA256SUMS-linux
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tally-monitor-linux-x86_64
+          path: |
+            desktop/release/*.tar.gz
+            desktop/release/*.AppImage
+            desktop/release/SHA256SUMS-linux
+          if-no-files-found: error
+
+  macos:
+    if: ${{ false }}          # se activa cuando se pruebe en una Mac
+    name: macOS ${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-latest          # Apple Silicon
+            arch: arm64
+          - runner: macos-15-intel        # Intel
+            arch: x86_64
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Empaquetar (scripts/macos/crear_release.sh)
+        run: bash scripts/macos/crear_release.sh
+      - name: Nombrar las sumas de verificación
+        run: mv release/SHA256SUMS release/SHA256SUMS-macos-${{ matrix.arch }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tally-monitor-macos-${{ matrix.arch }}
+          path: |
+            desktop/release/*.dmg
+            desktop/release/*.zip
+            desktop/release/SHA256SUMS-macos-${{ matrix.arch }}
+          if-no-files-found: error
+
+  publicar:
+    name: Crear el borrador de la versión
+    defaults:
+      run:
+        working-directory: .
+    needs: [windows]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write           # crear la Release
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: artefactos
+          merge-multiple: true
+      - name: Comprobar que la etiqueta coincide con la versión del programa
+        run: |
+          VERSION=$(sed -n 's/^__version__ = "\(.*\)"/\1/p' desktop/tally-monitor/src/tally_monitor/_version.py)
+          if [ "v$VERSION" != "$GITHUB_REF_NAME" ]; then
+            echo "La etiqueta $GITHUB_REF_NAME no coincide con la versión del programa ($VERSION)."; exit 1
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+      - name: Notas desde el CHANGELOG
+        run: |
+          awk -v v="$VERSION" '$0 ~ "^## "v"$" {on=1; next} /^## / {on=0} on' desktop/tally-monitor/CHANGELOG.md > notas.md
+          [ -s notas.md ] || echo "Tally Monitor $VERSION" > notas.md
+          printf '\n\nNo está firmado digitalmente: Windows puede mostrar un aviso (SmartScreen) la primera vez. Verificá la integridad con el archivo SHA256SUMS. Aplicación no oficial: no está afiliada a Tally.\n' >> notas.md
+      - name: Crear la Release en borrador
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls -l artefactos
+          gh release create "$GITHUB_REF_NAME" artefactos/* --draft --title "Tally Monitor $VERSION" --notes-file notas.md

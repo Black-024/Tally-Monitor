@@ -1,0 +1,9 @@
+Logos de Tally Monitor (ya incluidos).
+
+  logo_dark.png   Logo blanco, fondo transparente. Para fondos OSCUROS (tema oscuro, PDF e imágenes en estilo oscuro).
+  logo_light.png  Logo negro, fondo transparente. Para fondos CLAROS (tema claro, PDF e imágenes en estilo claro).
+  logo.png        Logo blanco sobre fondo negro, 512x512. Respaldo y logo de la aplicación.
+  logo.icns       Ícono de macOS (logo blanco sobre negro, con esquinas redondeadas). Lo usa la app .app y el .dmg.
+  logo.ico        Ícono de Windows (16 a 256 px, logo blanco sobre negro). Barra de tareas, .exe e instalador.
+
+Si se reemplazan, mantener los nombres. Después, volver a generar la versión (scripts\crear_release.bat).
