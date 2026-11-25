@@ -28,11 +28,16 @@ jobs:
   windows:
     name: Windows
     runs-on: windows-latest
+    env:
+      PY_PYTHON: "3.13"           # el comando «py» de los scripts usa esta versión (el runner trae varias)
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.13"
+      - name: Instalar dependencias (app, pruebas y empaquetado)
+        shell: pwsh
+        run: py -m pip install -r tally-monitor/requirements.txt -r tally-monitor/requirements-dev.txt -r tally-monitor/requirements-build.txt
       - name: Empaquetar (scripts/crear_release.ps1)
         shell: pwsh
         run: ./scripts/crear_release.ps1
